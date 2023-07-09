@@ -1,0 +1,6 @@
+[submodule "RadonUlzer"]
+	path = RadonUlzer
+	url = https://github.com/BlueAndi/RadonUlzer
+[submodule "DroidControlShip"]
+	path = DroidControlShip
+	url = https://github.com/BlueAndi/DroidControlShip
