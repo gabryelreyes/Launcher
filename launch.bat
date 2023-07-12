@@ -9,7 +9,7 @@ set LAUNCHER=%WEBOTS_HOME%\msys64\mingw64\bin\webots-controller.exe
 set RU_PROJECT=RadonUlzer
 set DCS_PROJECT=DroidControlShip
 set BASE_PORT=65432
-set BASE_NAME=Zumo
+set BASE_NAME=zumo
 
 rem ==== CHECK ARGUMENTS ====
 if ["%~1"]==[""] goto usage
@@ -62,6 +62,9 @@ for /l %%G in (0, 1, %N_ROBOTS%) do (
 
     echo Starting %RU_PROJECT%: %RU_ENV%: !instance_name! on port !instance_port!
     start "%RU_PROJECT%: !instance_name!" "%LAUNCHER%" --robot-name=!instance_name! "%RU_EXECUTABLE%" -n !instance_name! -p !instance_port!
+    
+    echo Starting %DCS_PROJECT%: %DCS_ENV%: !instance_name! on port !instance_port!
+    start "%DCS_PROJECT%: !instance_name!" "%DCS_EXECUTABLE%" -n !instance_name! -p !instance_port!
 )
 
 exit 0
