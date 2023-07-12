@@ -1,0 +1,53 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "../protos/Zumo32U4.proto"
+EXTERNPROTO "../protos/LineFollowerTrack.proto"
+
+WorldInfo {
+  info [
+    "Example uses of Track nodes, as caterpillar tracks on a robot, or as a conveyor belt."
+  ]
+  title "Track"
+  basicTimeStep 8
+  contactProperties [
+    ContactProperties {
+      material1 "track material"
+      coulombFriction [
+        500
+      ]
+      softCFM 0.0001
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.6559169030192322 -0.002575364284486154 -0.754828711584596 3.1475157800858597
+  position 0.6351031066501066 0.11857998878051107 3.9703493864518564
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+LineFollowerTrack {
+}
+Zumo32U4 {
+  translation -0.5 -0.5 0.0139993
+  rotation 0 0 1 1.5708
+  name "Zumo_0"
+}
+Zumo32U4 {
+  translation -0.5 0.5 0.0139993
+  rotation 1 0 0 0
+  name "Zumo_1"
+}
+Zumo32U4 {
+  translation 0.5 0.5 0.0139993
+  rotation 0 0 -1 1.5708
+  name "Zumo_2"
+}
+Zumo32U4 {
+  translation 0.5 -0.5 0.0139993
+  rotation 0 0 1 3.14159
+  name "Zumo_3"
+}
