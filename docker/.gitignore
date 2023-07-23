@@ -1,0 +1,3 @@
+node-red/*
+!node-red/flows.json
+!node-red/settings.js
