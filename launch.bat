@@ -7,6 +7,7 @@ SETLOCAL EnableDelayedExpansion
 rem ==== CONSTANTS ====
 set LAUNCHER=%WEBOTS_HOME%\msys64\mingw64\bin\webots-controller.exe
 set WEBOTS_EXE=%WEBOTS_HOME%\msys64\mingw64\bin\webots.exe
+set PIO_EXE=%USERPROFILE%\.platformio\penv\Scripts\pio.exe
 set RU_PROJECT=RadonUlzer
 set DCS_PROJECT=DroidControlShip
 set BASE_PORT=65432
@@ -58,16 +59,14 @@ if not exist "%LAUNCHER%" (
 
 rem ==== CHECK RadonUlzer Application ====
 if not exist "%RU_EXECUTABLE%" (
-    echo ERROR: %RU_EXECUTABLE% not found
-    echo Please build the RadonUlzer application.
-    exit 1
+    echo Building the RadonUlzer application.
+    start "Build RadonUlzer" /wait "%PIO_EXE%" run -e %RU_ENV% -d %RU_PROJECT%
 )
 
 rem ==== CHECK DroidControlShip Application ====
 if not exist "%DCS_EXECUTABLE%" (
-    echo ERROR: %DCS_EXECUTABLE% not found
-    echo Please build the DroidControlShip application.
-    exit 1
+    echo Building the DroidControlShip application.
+    start "Build DroidControlShip" /wait "%PIO_EXE%" run -e %DCS_ENV% -d %DCS_PROJECT%
 )
 
 rem ==== SPAWN WORLD IF NO REMOTE IP ADDRESS GIVEN ====
