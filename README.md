@@ -4,16 +4,16 @@ This project takes over the coordination and process-spawning of the simulation 
 
 ## Usage
 
-The Launch Script requires at least 3 arguments: Number of Robots, name of RadonUlzer's Environment, and the name of DroidControlShip's Environment. Optionally is possible to pass the IP Address of a remote Webots instance if needed.
+The Launch Script requires at least 5 arguments: Number of Robots, name of RadonUlzer's Environment, name of DroidControlShip's Environment, path to the Webots world to open, and `clean` or `noclean` if the projects should clean all intermediate files before running. Optionally is possible to pass the IP Address of a remote Webots instance if needed.
 
 Examples:
 
 ```batch
-.\launch.bat 4 RemoteControlSim RemoteControlSim
+.\launch.bat 4 RemoteControlSim RemoteControlSim webots\worlds\RemoteControl.wbt noclean
 ```
 
 ```batch
-.\launch.bat 1 LineFollowerSim RemoteControlSim "192.168.0.1"
+.\launch.bat 1 LineFollowerSim RemoteControlSim webots\worlds\LineFollower_track.wbt clean "192.168.0.1"
 ```
 
 ## Structure
