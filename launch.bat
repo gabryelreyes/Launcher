@@ -19,10 +19,11 @@ rem ==== CHECK ARGUMENTS ====
 if ["%~1"]==[""] goto usage
 if ["%~2"]==[""] goto usage
 if ["%~3"]==[""] goto usage
+if ["%~4"]==[""] goto usage
 
 rem ==== CHECK IP ADDRESS ====
-if not ["%~5"]==[""] (
-    set IP_ADDRESS=%5
+if not ["%~6"]==[""] (
+    set IP_ADDRESS=%6
 )
 
 rem N_ROBOTS starts with 0, so we need to subtract 1 from the argument
@@ -36,8 +37,11 @@ rem DroidControlShip environment and application
 set DCS_ENV=%3
 set DCS_EXECUTABLE=%DCS_PROJECT%\.pio\build\%DCS_ENV%\program.exe
 
+rem Webots world path
+set WEBOTS_WORLD=%4
+
 rem ==== CHECK FORCE CLEAN ====
-if ["%~4"]==["clean"] (
+if ["%~5"]==["clean"] (
     echo Cleaning %RU_PROJECT% and %DCS_PROJECT% projects
     start "Clean RadonUlzer" /wait "%PIO_EXE%" run --target clean -e %RU_ENV% -d %RU_PROJECT%
     start "Clean DroidControlShip" /wait "%PIO_EXE%" run -t clean -e %DCS_ENV% -d %DCS_PROJECT%
@@ -76,9 +80,9 @@ if not exist "%DCS_EXECUTABLE%" (
 )
 
 rem ==== SPAWN WORLD IF NO REMOTE IP ADDRESS GIVEN ====
-if ["%~4"]==[""] (
+if ["%~6"]==[""] (
     echo Starting Webots
-    start "Webots" "%WEBOTS_EXE%" webots\worlds\RemoteControl.wbt
+    start "Webots" "%WEBOTS_EXE%" %WEBOTS_WORLD%
 )
 
 rem ==== SPAWN INSTANCES ====
@@ -97,5 +101,5 @@ exit 0
 
 rem ==== USAGE ====
 :usage
-    echo Usage: %0 ^<Number of N_ROBOTS^> ^<RadonUlzer Environment^> ^<DroidControlShip Environment^> ^<clean|noclean^> ^<OPTIONAL Webots IP Address^>
+    echo Usage: %0 ^<Number of N_ROBOTS^> ^<RadonUlzer Environment^> ^<DroidControlShip Environment^> ^<Webots World^> ^<clean|noclean^> ^<OPTIONAL Webots IP Address^>
     exit 1
