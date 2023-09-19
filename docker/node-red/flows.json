@@ -2,38 +2,201 @@
     {
         "id": "dd6a603da7d0c499",
         "type": "tab",
-        "label": "Flow 4",
+        "label": "Frontend",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "ceec042f9af8332d",
-        "type": "junction",
+        "id": "96eaa7ec20e4caaa",
+        "type": "tab",
+        "label": "Backend",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "be1bb986c880914d",
+        "type": "group",
         "z": "dd6a603da7d0c499",
-        "x": 740,
-        "y": 420,
-        "wires": [
-            [
-                "78e8d5140436b061",
-                "f94baaa9d4aebb27",
-                "d75d2ef4e1642c88",
-                "3ac5bb62f28b7ec5"
-            ]
-        ]
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "c46b0501d04ce1fe",
+            "329645ee74bcd348",
+            "c2273144236ca94f",
+            "150bc85f3c5fe71d",
+            "cbe7df2b382ded7a"
+        ],
+        "x": 54,
+        "y": 59,
+        "w": 332,
+        "h": 182
+    },
+    {
+        "id": "bc51345d044ded83",
+        "type": "group",
+        "z": "dd6a603da7d0c499",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "179a921ea49d8e9a",
+            "3982a79e3a15dbea",
+            "093c4d2450413629",
+            "b35f4934a4d954ef",
+            "e97e8a0ad7836ff9",
+            "8a349c87a19fb05f",
+            "aef00c2580e1a7e6",
+            "d164111dbd2d667a"
+        ],
+        "x": 54,
+        "y": 259,
+        "w": 652,
+        "h": 262
+    },
+    {
+        "id": "3f73ba7f454ba33e",
+        "type": "group",
+        "z": "dd6a603da7d0c499",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "6736b35f8743e91e",
+            "1c7069e467bf1f92",
+            "aee781e6b9db87fd",
+            "0e50aacfd0689e1b",
+            "fb8f44d6485de99e",
+            "5f43ccd01c9f2d9e",
+            "e7fe5f8b4c46d4b9",
+            "4f9d17bb1c6756c5"
+        ],
+        "x": 54,
+        "y": 559,
+        "w": 842,
+        "h": 182
+    },
+    {
+        "id": "296c37b5d8532588",
+        "type": "group",
+        "z": "96eaa7ec20e4caaa",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "e436c25139f0f712",
+            "64e03d41b128dc2b",
+            "ee2dc0274d7e9df4",
+            "abb4f4026b55dde9",
+            "0bef65c8cc53385f",
+            "662eface4c986385",
+            "099280165f263cc4",
+            "42d945d50bfaa422"
+        ],
+        "x": 74,
+        "y": 59,
+        "w": 512,
+        "h": 242
+    },
+    {
+        "id": "bd86c5aad64bf4ca",
+        "type": "group",
+        "z": "96eaa7ec20e4caaa",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "78e8d5140436b061",
+            "f94baaa9d4aebb27",
+            "d75d2ef4e1642c88",
+            "3ac5bb62f28b7ec5",
+            "0c730c46d24e7db5",
+            "44563d540ac84d16",
+            "5e760efcb4dbc2a2",
+            "fa55f48af9bfef85"
+        ],
+        "x": 74,
+        "y": 339,
+        "w": 552,
+        "h": 242
     },
     {
         "id": "d164111dbd2d667a",
         "type": "junction",
         "z": "dd6a603da7d0c499",
-        "x": 740,
-        "y": 200,
+        "g": "bc51345d044ded83",
+        "x": 480,
+        "y": 420,
+        "wires": [
+            [
+                "e97e8a0ad7836ff9",
+                "8a349c87a19fb05f"
+            ]
+        ]
+    },
+    {
+        "id": "42d945d50bfaa422",
+        "type": "junction",
+        "z": "96eaa7ec20e4caaa",
+        "g": "296c37b5d8532588",
+        "x": 280,
+        "y": 160,
         "wires": [
             [
                 "e436c25139f0f712",
                 "64e03d41b128dc2b",
                 "ee2dc0274d7e9df4",
-                "abb4f4026b55dde9"
+                "abb4f4026b55dde9",
+                "662eface4c986385"
+            ]
+        ]
+    },
+    {
+        "id": "fa55f48af9bfef85",
+        "type": "junction",
+        "z": "96eaa7ec20e4caaa",
+        "g": "bd86c5aad64bf4ca",
+        "x": 300,
+        "y": 440,
+        "wires": [
+            [
+                "78e8d5140436b061",
+                "f94baaa9d4aebb27",
+                "d75d2ef4e1642c88",
+                "3ac5bb62f28b7ec5",
+                "0c730c46d24e7db5"
             ]
         ]
     },
@@ -65,9 +228,526 @@
         "sessionExpiry": ""
     },
     {
+        "id": "f6a927a5b170f8e3",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f219cc73a97ab53c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "8f51a3180c85ed48",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "f6a927a5b170f8e3",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "179a921ea49d8e9a",
+        "type": "inject",
+        "z": "dd6a603da7d0c499",
+        "g": "bc51345d044ded83",
+        "name": "CMD_ID_START_MOTOR_SPEED_CALIB",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"CMD_ID\":2}",
+        "payloadType": "json",
+        "x": 260,
+        "y": 440,
+        "wires": [
+            [
+                "d164111dbd2d667a"
+            ]
+        ]
+    },
+    {
+        "id": "c46b0501d04ce1fe",
+        "type": "debug",
+        "z": "dd6a603da7d0c499",
+        "g": "be1bb986c880914d",
+        "name": "Will",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 290,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "329645ee74bcd348",
+        "type": "mqtt in",
+        "z": "dd6a603da7d0c499",
+        "g": "be1bb986c880914d",
+        "name": "",
+        "topic": "will",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "a37d20f67a485a8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 200,
+        "wires": [
+            [
+                "c46b0501d04ce1fe"
+            ]
+        ]
+    },
+    {
+        "id": "c2273144236ca94f",
+        "type": "debug",
+        "z": "dd6a603da7d0c499",
+        "g": "be1bb986c880914d",
+        "name": "Birth",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 290,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "150bc85f3c5fe71d",
+        "type": "mqtt in",
+        "z": "dd6a603da7d0c499",
+        "g": "be1bb986c880914d",
+        "name": "",
+        "topic": "birth",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "a37d20f67a485a8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "c2273144236ca94f"
+            ]
+        ]
+    },
+    {
+        "id": "6736b35f8743e91e",
+        "type": "range",
+        "z": "dd6a603da7d0c499",
+        "g": "3f73ba7f454ba33e",
+        "minin": "-100",
+        "maxin": "100",
+        "minout": "-32768",
+        "maxout": "32767",
+        "action": "scale",
+        "round": true,
+        "property": "payload",
+        "name": "int16 Range scaling",
+        "x": 350,
+        "y": 660,
+        "wires": [
+            [
+                "fb8f44d6485de99e"
+            ]
+        ]
+    },
+    {
+        "id": "1c7069e467bf1f92",
+        "type": "ui_slider",
+        "z": "dd6a603da7d0c499",
+        "g": "3f73ba7f454ba33e",
+        "name": "Left Slider",
+        "label": "LEFT : {{value}}",
+        "tooltip": "",
+        "group": "8f51a3180c85ed48",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "all",
+        "topic": "left",
+        "topicType": "str",
+        "min": "-10",
+        "max": "10",
+        "step": 1,
+        "className": "",
+        "x": 140,
+        "y": 660,
+        "wires": [
+            [
+                "6736b35f8743e91e"
+            ]
+        ]
+    },
+    {
+        "id": "aee781e6b9db87fd",
+        "type": "ui_slider",
+        "z": "dd6a603da7d0c499",
+        "g": "3f73ba7f454ba33e",
+        "name": "Right Slider",
+        "label": "RIGHT: {{value}}",
+        "tooltip": "",
+        "group": "8f51a3180c85ed48",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "all",
+        "topic": "right",
+        "topicType": "str",
+        "min": "-10",
+        "max": "10",
+        "step": 1,
+        "className": "",
+        "x": 150,
+        "y": 700,
+        "wires": [
+            [
+                "0e50aacfd0689e1b"
+            ]
+        ]
+    },
+    {
+        "id": "0e50aacfd0689e1b",
+        "type": "range",
+        "z": "dd6a603da7d0c499",
+        "g": "3f73ba7f454ba33e",
+        "minin": "-100",
+        "maxin": "100",
+        "minout": "-32768",
+        "maxout": "32767",
+        "action": "scale",
+        "round": true,
+        "property": "payload",
+        "name": "int16 Range scaling",
+        "x": 350,
+        "y": 700,
+        "wires": [
+            [
+                "fb8f44d6485de99e"
+            ]
+        ]
+    },
+    {
+        "id": "fb8f44d6485de99e",
+        "type": "function",
+        "z": "dd6a603da7d0c499",
+        "g": "3f73ba7f454ba33e",
+        "name": "JSON Parser",
+        "func": "if (msg.topic === 'left') {\n    context.left = msg.payload;\n} else if (msg.topic === 'right') {\n    context.right = msg.payload;\n}\n\nmsg.payload = { \"LEFT\": context.left, \"RIGHT\": context.right };\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\ncontext.left = 0;\ncontext.right = 0;",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 680,
+        "wires": [
+            [
+                "5f43ccd01c9f2d9e",
+                "e7fe5f8b4c46d4b9"
+            ]
+        ]
+    },
+    {
+        "id": "3982a79e3a15dbea",
+        "type": "inject",
+        "z": "dd6a603da7d0c499",
+        "g": "bc51345d044ded83",
+        "name": "CMD_ID_START_LINE_SENSOR_CALIB",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"CMD_ID\":1}",
+        "payloadType": "json",
+        "x": 260,
+        "y": 400,
+        "wires": [
+            [
+                "d164111dbd2d667a"
+            ]
+        ]
+    },
+    {
+        "id": "093c4d2450413629",
+        "type": "inject",
+        "z": "dd6a603da7d0c499",
+        "g": "bc51345d044ded83",
+        "name": "CMD_ID_REINIT_BOARD",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"CMD_ID\":3}",
+        "payloadType": "json",
+        "x": 310,
+        "y": 480,
+        "wires": [
+            [
+                "d164111dbd2d667a"
+            ]
+        ]
+    },
+    {
+        "id": "b35f4934a4d954ef",
+        "type": "inject",
+        "z": "dd6a603da7d0c499",
+        "g": "bc51345d044ded83",
+        "name": "CMD_ID_IDLE",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"CMD_ID\":0}",
+        "payloadType": "json",
+        "x": 340,
+        "y": 360,
+        "wires": [
+            [
+                "d164111dbd2d667a"
+            ]
+        ]
+    },
+    {
+        "id": "cbe7df2b382ded7a",
+        "type": "comment",
+        "z": "dd6a603da7d0c499",
+        "g": "be1bb986c880914d",
+        "name": "Control Messages",
+        "info": "",
+        "x": 210,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e97e8a0ad7836ff9",
+        "type": "link out",
+        "z": "dd6a603da7d0c499",
+        "g": "bc51345d044ded83",
+        "name": "Command OUT",
+        "mode": "link",
+        "links": [
+            "0bef65c8cc53385f"
+        ],
+        "x": 535,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8a349c87a19fb05f",
+        "type": "debug",
+        "z": "dd6a603da7d0c499",
+        "g": "bc51345d044ded83",
+        "name": "Command",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 590,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "5f43ccd01c9f2d9e",
+        "type": "link out",
+        "z": "dd6a603da7d0c499",
+        "g": "3f73ba7f454ba33e",
+        "name": "MotorSpeeds OUT",
+        "mode": "link",
+        "links": [
+            "44563d540ac84d16"
+        ],
+        "x": 705,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "e7fe5f8b4c46d4b9",
+        "type": "debug",
+        "z": "dd6a603da7d0c499",
+        "g": "3f73ba7f454ba33e",
+        "name": "Motor Speeds",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 770,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "aef00c2580e1a7e6",
+        "type": "comment",
+        "z": "dd6a603da7d0c499",
+        "g": "bc51345d044ded83",
+        "name": "Commands",
+        "info": "",
+        "x": 350,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "4f9d17bb1c6756c5",
+        "type": "comment",
+        "z": "dd6a603da7d0c499",
+        "g": "3f73ba7f454ba33e",
+        "name": "Motor Speeds",
+        "info": "",
+        "x": 330,
+        "y": 600,
+        "wires": []
+    },
+    {
         "id": "e436c25139f0f712",
         "type": "mqtt out",
-        "z": "dd6a603da7d0c499",
+        "z": "96eaa7ec20e4caaa",
+        "g": "296c37b5d8532588",
         "name": "",
         "topic": "zumo_0/cmd",
         "qos": "0",
@@ -78,206 +758,15 @@
         "correl": "",
         "expiry": "",
         "broker": "a37d20f67a485a8c",
-        "x": 870,
-        "y": 140,
+        "x": 470,
+        "y": 100,
         "wires": []
-    },
-    {
-        "id": "179a921ea49d8e9a",
-        "type": "inject",
-        "z": "dd6a603da7d0c499",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "motorcalib",
-        "payloadType": "str",
-        "x": 620,
-        "y": 200,
-        "wires": [
-            [
-                "d164111dbd2d667a"
-            ]
-        ]
-    },
-    {
-        "id": "78e8d5140436b061",
-        "type": "mqtt out",
-        "z": "dd6a603da7d0c499",
-        "name": "",
-        "topic": "zumo_0/motorSpeeds",
-        "qos": "0",
-        "retain": "false",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "a37d20f67a485a8c",
-        "x": 900,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "8c6a4add746c07f0",
-        "type": "inject",
-        "z": "dd6a603da7d0c499",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "forward",
-        "payloadType": "str",
-        "x": 630,
-        "y": 340,
-        "wires": [
-            [
-                "ceec042f9af8332d"
-            ]
-        ]
-    },
-    {
-        "id": "6c051ccccc05511a",
-        "type": "inject",
-        "z": "dd6a603da7d0c499",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "backward",
-        "payloadType": "str",
-        "x": 620,
-        "y": 380,
-        "wires": [
-            [
-                "ceec042f9af8332d"
-            ]
-        ]
-    },
-    {
-        "id": "5f8e2320c2283f4e",
-        "type": "inject",
-        "z": "dd6a603da7d0c499",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "left",
-        "payloadType": "str",
-        "x": 630,
-        "y": 420,
-        "wires": [
-            [
-                "ceec042f9af8332d"
-            ]
-        ]
-    },
-    {
-        "id": "01d61d84464e798a",
-        "type": "inject",
-        "z": "dd6a603da7d0c499",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "right",
-        "payloadType": "str",
-        "x": 630,
-        "y": 460,
-        "wires": [
-            [
-                "ceec042f9af8332d"
-            ]
-        ]
-    },
-    {
-        "id": "68465bd56e26db08",
-        "type": "inject",
-        "z": "dd6a603da7d0c499",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "stop",
-        "payloadType": "str",
-        "x": 630,
-        "y": 500,
-        "wires": [
-            [
-                "ceec042f9af8332d"
-            ]
-        ]
     },
     {
         "id": "64e03d41b128dc2b",
         "type": "mqtt out",
-        "z": "dd6a603da7d0c499",
+        "z": "96eaa7ec20e4caaa",
+        "g": "296c37b5d8532588",
         "name": "",
         "topic": "zumo_1/cmd",
         "qos": "0",
@@ -288,32 +777,15 @@
         "correl": "",
         "expiry": "",
         "broker": "a37d20f67a485a8c",
-        "x": 870,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "f94baaa9d4aebb27",
-        "type": "mqtt out",
-        "z": "dd6a603da7d0c499",
-        "name": "",
-        "topic": "zumo_1/motorSpeeds",
-        "qos": "0",
-        "retain": "false",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "a37d20f67a485a8c",
-        "x": 900,
-        "y": 400,
+        "x": 470,
+        "y": 140,
         "wires": []
     },
     {
         "id": "ee2dc0274d7e9df4",
         "type": "mqtt out",
-        "z": "dd6a603da7d0c499",
+        "z": "96eaa7ec20e4caaa",
+        "g": "296c37b5d8532588",
         "name": "",
         "topic": "zumo_2/cmd",
         "qos": "0",
@@ -324,14 +796,15 @@
         "correl": "",
         "expiry": "",
         "broker": "a37d20f67a485a8c",
-        "x": 870,
-        "y": 220,
+        "x": 470,
+        "y": 180,
         "wires": []
     },
     {
         "id": "abb4f4026b55dde9",
         "type": "mqtt out",
-        "z": "dd6a603da7d0c499",
+        "z": "96eaa7ec20e4caaa",
+        "g": "296c37b5d8532588",
         "name": "",
         "topic": "zumo_3/cmd",
         "qos": "0",
@@ -342,14 +815,88 @@
         "correl": "",
         "expiry": "",
         "broker": "a37d20f67a485a8c",
-        "x": 870,
+        "x": 470,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "0bef65c8cc53385f",
+        "type": "link in",
+        "z": "96eaa7ec20e4caaa",
+        "g": "296c37b5d8532588",
+        "name": "Command IN",
+        "links": [
+            "e97e8a0ad7836ff9"
+        ],
+        "x": 215,
+        "y": 160,
+        "wires": [
+            [
+                "42d945d50bfaa422"
+            ]
+        ]
+    },
+    {
+        "id": "662eface4c986385",
+        "type": "debug",
+        "z": "96eaa7ec20e4caaa",
+        "g": "296c37b5d8532588",
+        "name": "Command",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 470,
         "y": 260,
+        "wires": []
+    },
+    {
+        "id": "78e8d5140436b061",
+        "type": "mqtt out",
+        "z": "96eaa7ec20e4caaa",
+        "g": "bd86c5aad64bf4ca",
+        "name": "",
+        "topic": "zumo_0/motorSpeeds",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a37d20f67a485a8c",
+        "x": 500,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "f94baaa9d4aebb27",
+        "type": "mqtt out",
+        "z": "96eaa7ec20e4caaa",
+        "g": "bd86c5aad64bf4ca",
+        "name": "",
+        "topic": "zumo_1/motorSpeeds",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a37d20f67a485a8c",
+        "x": 500,
+        "y": 420,
         "wires": []
     },
     {
         "id": "d75d2ef4e1642c88",
         "type": "mqtt out",
-        "z": "dd6a603da7d0c499",
+        "z": "96eaa7ec20e4caaa",
+        "g": "bd86c5aad64bf4ca",
         "name": "",
         "topic": "zumo_2/motorSpeeds",
         "qos": "0",
@@ -360,14 +907,15 @@
         "correl": "",
         "expiry": "",
         "broker": "a37d20f67a485a8c",
-        "x": 900,
-        "y": 440,
+        "x": 500,
+        "y": 460,
         "wires": []
     },
     {
         "id": "3ac5bb62f28b7ec5",
         "type": "mqtt out",
-        "z": "dd6a603da7d0c499",
+        "z": "96eaa7ec20e4caaa",
+        "g": "bd86c5aad64bf4ca",
         "name": "",
         "topic": "zumo_3/motorSpeeds",
         "qos": "0",
@@ -378,55 +926,65 @@
         "correl": "",
         "expiry": "",
         "broker": "a37d20f67a485a8c",
-        "x": 900,
-        "y": 480,
+        "x": 500,
+        "y": 500,
         "wires": []
     },
     {
-        "id": "012d399ebf20499d",
-        "type": "mqtt out",
-        "z": "dd6a603da7d0c499",
-        "name": "",
-        "topic": "test",
-        "qos": "0",
-        "retain": "false",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "a37d20f67a485a8c",
-        "x": 1450,
-        "y": 200,
+        "id": "0c730c46d24e7db5",
+        "type": "debug",
+        "z": "96eaa7ec20e4caaa",
+        "g": "bd86c5aad64bf4ca",
+        "name": "Motor Speeds",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 480,
+        "y": 540,
         "wires": []
     },
     {
-        "id": "3c5311c9e3e1fe21",
-        "type": "inject",
-        "z": "dd6a603da7d0c499",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
+        "id": "44563d540ac84d16",
+        "type": "link in",
+        "z": "96eaa7ec20e4caaa",
+        "g": "bd86c5aad64bf4ca",
+        "name": "MotorSpeeds IN",
+        "links": [
+            "5f43ccd01c9f2d9e"
         ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "motorcalib",
-        "payloadType": "str",
-        "x": 1240,
-        "y": 200,
+        "x": 215,
+        "y": 440,
         "wires": [
             [
-                "012d399ebf20499d"
+                "fa55f48af9bfef85"
             ]
         ]
+    },
+    {
+        "id": "099280165f263cc4",
+        "type": "comment",
+        "z": "96eaa7ec20e4caaa",
+        "g": "296c37b5d8532588",
+        "name": "Commands",
+        "info": "",
+        "x": 170,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "5e760efcb4dbc2a2",
+        "type": "comment",
+        "z": "96eaa7ec20e4caaa",
+        "g": "bd86c5aad64bf4ca",
+        "name": "Motor Speeds",
+        "info": "",
+        "x": 170,
+        "y": 380,
+        "wires": []
     }
 ]
