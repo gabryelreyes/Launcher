@@ -13,7 +13,7 @@ Examples:
 ```
 
 ```batch
-.\launch.bat 1 LineFollowerSim RemoteControlSim webots\worlds\LineFollower_track.wbt clean "192.168.0.1"
+.\launch.bat 1 LineFollowerSim RemoteControlSim webots\worlds\LineFollower.wbt clean "192.168.0.1"
 ```
 
 ## Structure
@@ -60,5 +60,6 @@ A `docker-compose.yml` file can be found under the `docker` folder. This file ca
 To start the services, use the following command from inside the `docker` folder:
 
 ```batch
+cd docker
 docker-compose -p launcher up -d
 ```
