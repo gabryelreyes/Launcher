@@ -2,6 +2,8 @@
 
 This project takes over the coordination and process-spawning of the simulation robots and other applications related to the [RadonUlzer](https://github.com/BlueAndi/RadonUlzer) and [DroidControlShip](https://github.com/BlueAndi/DroidControlShip) projects.
 
+![deployment](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/gabryelreyes/Launcher/master/doc/uml/deployment.puml)
+
 ## Usage
 
 The Launch Script requires at least 5 arguments: Number of Robots, name of RadonUlzer's Environment, name of DroidControlShip's Environment, path to the Webots world to open, and `clean` or `noclean` if the projects should clean all intermediate files before running. Optionally is possible to pass the IP Address of a remote Webots instance if needed.

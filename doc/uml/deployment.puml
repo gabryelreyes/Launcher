@@ -1,0 +1,30 @@
+@startuml LauncherDeployment
+
+Title Launcher Deployment
+
+node "PC" as pc {
+
+    node "Launcher" as launcher <<executable>>
+
+    node "Docker" as docker {
+        node "MQTT Broker" as broker <<container>>
+    }
+
+    interface "MQTT over\n TCP/IP" as tcp1
+
+    node "DroidControlShip" as dcs <<executable>>
+
+    interface "SerialMuxProt\n over TCP/IP" as tcp2
+
+    node "RadonUlzer" as ru <<executable>>
+
+    broker -- tcp1
+    tcp1 )-- dcs : <<protocol>>\nMQTT
+    dcs --( tcp2
+    tcp2 -- ru : <<protocol>>\nSerialMuxProt
+
+    launcher .> dcs : <<deploy>>
+    launcher .> ru : <<deploy>>
+}
+
+@enduml
