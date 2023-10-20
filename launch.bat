@@ -20,6 +20,7 @@ if ["%~1"]==[""] goto usage
 if ["%~2"]==[""] goto usage
 if ["%~3"]==[""] goto usage
 if ["%~4"]==[""] goto usage
+if ["%~5"]==[""] goto usage
 
 rem ==== CHECK IP ADDRESS ====
 if not ["%~6"]==[""] (
@@ -101,5 +102,5 @@ exit 0
 
 rem ==== USAGE ====
 :usage
-    echo Usage: %0 ^<Number of N_ROBOTS^> ^<RadonUlzer Environment^> ^<DroidControlShip Environment^> ^<Webots World^> ^<clean|noclean^> ^<OPTIONAL Webots IP Address^>
+    echo Usage: %0 ^<Number of N_ROBOTS^> ^<RadonUlzer Environment^> ^<DroidControlShip Environment^> ^<Webots World^> ^<clean/noclean^> ^<OPTIONAL Webots IP Address^>
     exit 1
