@@ -27,6 +27,15 @@ if not ["%~6"]==[""] (
     set IP_ADDRESS=%6
 )
 
+rem ==== CHECK DOCKER CONTAINER ====
+for /f %%i in ('docker ps -qf "name=^MQTT_Broker"') do set containerId=%%i
+
+if "%containerId%" == "" (
+    rem If the container does not exist, create it
+    docker-compose -p launcher down
+    docker-compose -p launcher -f docker/docker-compose.yml up -d
+)
+
 rem N_ROBOTS starts with 0, so we need to subtract 1 from the argument
 set /a N_ROBOTS=%1-1
 
