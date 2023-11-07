@@ -28,12 +28,10 @@
 # Imports
 ################################################################################
 
-from os import write
-from pydoc_data import topics
 import sys
 import json
 from datetime import datetime
-from influxdb_client import InfluxDBClient, WriteApi, WritePrecision
+from influxdb_client import InfluxDBClient, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
 import paho.mqtt.subscribe as subscribe
 
