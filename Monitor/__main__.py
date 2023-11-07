@@ -28,14 +28,26 @@
 # Imports
 ################################################################################
 
+from os import write
+from pydoc_data import topics
 import sys
+import json
 from datetime import datetime
-from influxdb_client import InfluxDBClient, WritePrecision
+from influxdb_client import InfluxDBClient, WriteApi, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
+import paho.mqtt.subscribe as subscribe
 
 ################################################################################
 # Variables
 ################################################################################
+
+# InfluxDB variables
+org = "my-org"  # organization with write access
+bucket = "my-bucket"  # bucket with write access
+token = "my-token"  # token with write access
+write_precision = WritePrecision.MS  # milliseconds
+url = "http://localhost:8086"  # InfluxDB server URL
+project_topics = ["zumo_1/pid"]  # MQTT topics to subscribe to
 
 ################################################################################
 # Classes
@@ -46,6 +58,27 @@ from influxdb_client.client.write_api import SYNCHRONOUS
 ################################################################################
 
 
+def topic_callback(client, userdata, message) -> None:
+    """
+    Callback function for subscribed topics.
+
+    """
+
+    # Pack data
+    logdata = [{"measurement": message.topic.split("/")[1],
+                "fields": json.loads(message.payload),
+                "time": datetime.utcnow()}]
+
+    # Write data to InfluxDB
+    # write_api passed to callback function as userdata
+    write_api = userdata
+    write_api.write(bucket, org, logdata,
+                    write_precision=write_precision)
+
+    # Print data to console
+    print(logdata)
+
+
 def main() -> int:
     """
     Main function
@@ -54,34 +87,18 @@ def main() -> int:
         int: System exit status
     """
 
-    org = "my-org"
-    bucket = "my-bucket"
-    token = "my-token"
-
-    # establish a connection
-    client = InfluxDBClient(url="http://localhost:8086", token=token, org=org)
+    # establish a connection to the InfluxDB server
+    client = InfluxDBClient(url=url, token=token, org=org)
 
     # instantiate the WriteAPI and QueryAPI
     write_api = client.write_api(write_options=SYNCHRONOUS)
 
-    logdata = [{"measurement": "Wallbox",
-                "fields": {
-                    "Inverter-State": 0,
-                    "Current-PV-Power": 0,
-                    "PV-Energy-total": 0,
-                    "BAT_U": 0,
-                    "BAT_SOC": 0,
-                    "BAT-Power": 0,
-                    "AC_Out-U": 0,
-                    "AC_Out-Power": 0,
-                    "EVSE-State": 0,
-                    "EV-State": 0,
-                    "EVSE-Current_Power": 0
-                },
-                "time": datetime.utcnow()}]
+    # Subscribe to topics
+    # write_api passed to callback function as userdata
+    subscribe.callback(topic_callback, project_topics, userdata=write_api)
 
-    write_api.write(bucket, org, logdata,
-                    write_precision=WritePrecision.S)
+    while (True):
+        ...
 
     return 0
 
