@@ -92,7 +92,7 @@ if not exist "%DCS_EXECUTABLE%" (
 rem ==== SPAWN WORLD IF NO REMOTE IP ADDRESS GIVEN ====
 if ["%~6"]==[""] (
     echo Starting Webots
-    start "Webots" "%WEBOTS_EXE%" %WEBOTS_WORLD%
+    start /min "Webots" "%WEBOTS_EXE%" %WEBOTS_WORLD%
 )
 
 rem ==== SPAWN INSTANCES ====
@@ -101,10 +101,10 @@ for /l %%G in (0, 1, %N_ROBOTS%) do (
     set instance_name=%BASE_NAME%_%%G
 
     echo Starting %RU_PROJECT%: %RU_ENV%: !instance_name! on port !instance_port!
-    start "%RU_PROJECT%: !instance_name!" "%LAUNCHER%" --protocol=tcp --ip-address=%IP_ADDRESS% --robot-name=!instance_name! "%RU_EXECUTABLE%" -n !instance_name! -p !instance_port! -s
+    start /min "%RU_PROJECT%: !instance_name!" "%LAUNCHER%" --protocol=tcp --ip-address=%IP_ADDRESS% --robot-name=!instance_name! "%RU_EXECUTABLE%" -n !instance_name! -p !instance_port! -s
     
     echo Starting %DCS_PROJECT%: %DCS_ENV%: !instance_name! on port !instance_port!
-    start "%DCS_PROJECT%: !instance_name!" "%DCS_EXECUTABLE%" -n !instance_name! -p !instance_port!
+    start /min "%DCS_PROJECT%: !instance_name!" "%DCS_EXECUTABLE%" -v -n !instance_name! --cfgFilePath "config/!instance_name!.json" --radonUlzerPort !instance_port!
 )
 
 exit 0
