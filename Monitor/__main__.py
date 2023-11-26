@@ -36,16 +36,24 @@ from influxdb_client.client.write_api import SYNCHRONOUS
 import paho.mqtt.subscribe as subscribe
 
 ################################################################################
-# Variables
+# Constants
 ################################################################################
 
-# InfluxDB variables
+# InfluxDB constants
+# These should not be changed if using the default Launcher Project configuration.
+# If using a custom configuration, these should match the configuration.
 org = "my-org"  # organization with write access
 bucket = "my-bucket"  # bucket with write access
 token = "my-token"  # token with write access
 write_precision = WritePrecision.MS  # milliseconds
 url = "http://localhost:8086"  # InfluxDB server URL
-project_topics = ["zumo_1/pid"]  # MQTT topics to subscribe to
+
+################################################################################
+# Variables
+################################################################################
+
+# MQTT topics list to subscribe to
+project_topics = ["zumo_1/pid"]
 
 ################################################################################
 # Classes
@@ -63,7 +71,7 @@ def topic_callback(client, userdata, message) -> None:
     """
 
     # Pack data
-    logdata = [{"measurement": message.topic.split("/")[1],
+    logdata = [{"measurement": message.topic,
                 "fields": json.loads(message.payload),
                 "time": datetime.utcnow()}]
 
