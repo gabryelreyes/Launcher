@@ -107,6 +107,16 @@ for /l %%G in (0, 1, %N_ROBOTS%) do (
     start /min "%DCS_PROJECT%: !instance_name!" "%DCS_EXECUTABLE%" -v -n !instance_name! --cfgFilePath "config/!instance_name!.json" --radonUlzerPort !instance_port!
 )
 
+rem ==== CLEANUP ====
+echo Press any key to exit...
+pause
+
+echo Killing Webots and all robot instances
+taskkill /f /im webots-bin.exe
+taskkill /f /im program.exe
+
+echo Done
+
 exit 0
 
 rem ==== USAGE ====
